@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Requirements Demo</title>
+  <link rel="stylesheet" href="css-demo.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <h1>CSS Requirements Demo</h1>
+    <p>This page shows: box model, filters, advanced image styling, animation, and responsive design.</p>
+  </header>
+
+  <main class="wrap">
+
+    <!-- BOX MODEL -->
+    <section class="section">
+      <h2>1) CSS Box Model (Padding + Border + Margin)</h2>
+      <p class="hint">This card has visible margin outside, a border, and padding inside.</p>
+
+      <div class="box-model">
+        <h3>Box Model Card</h3>
+        <p>
+          Margin creates space outside the box. Padding creates space inside the box (between content and border).
+          Border outlines the box.
+        </p>
+      </div>
+    </section>
+
+    <!-- CSS FILTER -->
+    <section class="section">
+      <h2>2) CSS Filter Applied to an Image</h2>
+
+      <div class="grid">
+        <figure class="figure">
+          <img src="images/digital-art.jpg" alt="Original image" />
+          <figcaption>Original</figcaption>
+        </figure>
+
+        <figure class="figure">
+          <img class="filtered" src="images/digital-art.jpg" alt="Filtered image" />
+          <figcaption>Filtered with CSS: grayscale + contrast + brightness</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ADVANCED CSS IMAGE -->
+    <section class="section">
+      <h2>3) Advanced CSS Image Example (clip-path)</h2>
+      <p class="hint">
+        This image uses <code>clip-path</code> to create a custom shape (advanced CSS image styling).
+      </p>
+
+      <div class="grid">
+        <figure class="figure">
+          <img class="clipped" src="images/profile.jpg" alt="Clipped image example" />
+          <figcaption>clip-path polygon shape</figcaption>
+        </figure>
+
+        <div class="tip">
+          <p><strong>Why this is “advanced”:</strong> clip-path is a CSS feature that masks/crops images into non-rectangular shapes.</p>
+          <p>You can replace this with <code>object-fit</code> or <code>mask-image</code> if your teacher prefers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS ANIMATION -->
+    <section class="section">
+      <h2>4) CSS Animation (Keyframes)</h2>
+      <p class="hint">The pencil icon moves across the container using <code>@keyframes</code>.</p>
+
+      <div class="anim-stage">
+        <img class="pencil" src="images/pencil.png" alt="Animated pencil" />
+        <p class="anim-text">CSS Animation running…</p>
+      </div>
+    </section>
+
+    <!-- RESPONSIVE DESIGN -->
+    <section class="section">
+      <h2>5) Responsive Web Design</h2>
+      <p class="hint">
+        Resize the browser: the grid changes from 1 column (mobile) to 2 columns (desktop) using a media query.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Made in VS Code • Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
