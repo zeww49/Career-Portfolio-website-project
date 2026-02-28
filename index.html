@@ -3,92 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CSS Requirements Demo</title>
+  <title>CSS Requirements Demo | Career Portfolio</title>
   <link rel="stylesheet" href="css-demo.css" />
 </head>
 
 <body>
   <header class="hero">
     <h1>CSS Requirements Demo</h1>
-    <p>This page shows: box model, filters, advanced image styling, animation, and responsive design.</p>
+    <p class="subtitle">
+      This page demonstrates: the CSS Box Model, a CSS filter, an advanced CSS image technique,
+      a CSS animation, and responsive web design.
+    </p>
+
+    <a class="btn" href="#" onclick="return false;">(Link this page from Canva)</a>
   </header>
 
   <main class="wrap">
 
-    <!-- BOX MODEL -->
-    <section class="section">
-      <h2>1) CSS Box Model (Padding + Border + Margin)</h2>
-      <p class="hint">This card has visible margin outside, a border, and padding inside.</p>
+    <!-- 1) BOX MODEL -->
+    <section class="section" id="box-model">
+      <h2>1) CSS Box Model</h2>
+      <p class="hint">
+        This card shows <strong>margin</strong> (space outside), <strong>border</strong> (outline),
+        and <strong>padding</strong> (space inside).
+      </p>
 
-      <div class="box-model">
+      <div class="box-model-card">
         <h3>Box Model Card</h3>
         <p>
-          Margin creates space outside the box. Padding creates space inside the box (between content and border).
-          Border outlines the box.
+          Margin creates space outside this card. The border outlines the card.
+          Padding creates space between the border and this text.
         </p>
       </div>
     </section>
 
-    <!-- CSS FILTER -->
-    <section class="section">
+    <!-- 2) CSS FILTER -->
+    <section class="section" id="filter">
       <h2>2) CSS Filter Applied to an Image</h2>
+      <p class="hint">
+        The second image uses <code>filter:</code> to change its appearance.
+      </p>
 
       <div class="grid">
-        <figure class="figure">
+        <figure class="panel">
           <img src="images/digital-art.jpg" alt="Original image" />
-          <figcaption>Original</figcaption>
+          <figcaption>Original image</figcaption>
         </figure>
 
-        <figure class="figure">
+        <figure class="panel">
           <img class="filtered" src="images/digital-art.jpg" alt="Filtered image" />
-          <figcaption>Filtered with CSS: grayscale + contrast + brightness</figcaption>
+          <figcaption>CSS filter: grayscale + contrast + brightness</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ADVANCED CSS IMAGE -->
-    <section class="section">
-      <h2>3) Advanced CSS Image Example (clip-path)</h2>
+    <!-- 3) ADVANCED CSS IMAGE -->
+    <section class="section" id="advanced-image">
+      <h2>3) Advanced CSS Image Example</h2>
       <p class="hint">
-        This image uses <code>clip-path</code> to create a custom shape (advanced CSS image styling).
+        This image uses <code>clip-path</code> (advanced CSS) to crop the image into a custom shape.
       </p>
 
       <div class="grid">
-        <figure class="figure">
+        <figure class="panel">
           <img class="clipped" src="images/profile.jpg" alt="Clipped image example" />
-          <figcaption>clip-path polygon shape</figcaption>
+          <figcaption>Advanced CSS: clip-path polygon</figcaption>
         </figure>
 
-        <div class="tip">
-          <p><strong>Why this is “advanced”:</strong> clip-path is a CSS feature that masks/crops images into non-rectangular shapes.</p>
-          <p>You can replace this with <code>object-fit</code> or <code>mask-image</code> if your teacher prefers.</p>
+        <div class="panel text-panel">
+          <h3>Why this is “advanced”</h3>
+          <p>
+            <code>clip-path</code> lets you mask/crop an image into shapes that are not rectangles
+            (like polygons or circles). This is considered an advanced CSS image technique.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- CSS ANIMATION -->
-    <section class="section">
-      <h2>4) CSS Animation (Keyframes)</h2>
-      <p class="hint">The pencil icon moves across the container using <code>@keyframes</code>.</p>
+    <!-- 4) CSS ANIMATION -->
+    <section class="section" id="animation">
+      <h2>4) CSS Animation</h2>
+      <p class="hint">
+        The pencil moves using a CSS animation created with <code>@keyframes</code>.
+      </p>
 
       <div class="anim-stage">
         <img class="pencil" src="images/pencil.png" alt="Animated pencil" />
-        <p class="anim-text">CSS Animation running…</p>
+        <p class="anim-text">Animated using CSS <code>@keyframes</code>.</p>
       </div>
     </section>
 
-    <!-- RESPONSIVE DESIGN -->
-    <section class="section">
+    <!-- 5) RESPONSIVE DESIGN -->
+    <section class="section" id="responsive">
       <h2>5) Responsive Web Design</h2>
       <p class="hint">
-        Resize the browser: the grid changes from 1 column (mobile) to 2 columns (desktop) using a media query.
+        On smaller screens, the layout becomes one column. On larger screens, it becomes two columns
+        using a <code>@media</code> query.
       </p>
+
+      <div class="responsive-demo">
+        <div class="responsive-box">Column 1</div>
+        <div class="responsive-box">Column 2</div>
+      </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>Made in VS Code • Hosted on GitHub Pages</p>
+    <p>Made and hosted on GitHub Pages</p>
   </footer>
 </body>
 </html>
