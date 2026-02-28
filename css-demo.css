@@ -70,37 +70,30 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   border-radius: 10px;
 }
 
-/* CSS ANIMATION REQUIREMENT */
-.anim-stage {
+.anim-stage{
   position: relative;
-  height: 220px;
   border: 2px dashed #222;
   border-radius: 14px;
+  padding: 18px;
+  min-height: 220px;
   overflow: hidden;
-  margin-top: 20px;
-  background: #f9f9f9;
+  background: #fafafa;
 }
 
-/* The ball */
-.ball {
+.ball{
   width: 60px;
   height: 60px;
-  background: radial-gradient(circle at 30% 30%, #ff6b6b, #c92a3a);
   border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff6b6b, #c92a2a);
   position: absolute;
-  left: 0;
-  top: 120px;
-
-  animation: bounce 2s ease-in-out infinite;
+  left: -70px;
+  top: 110px;
+  animation: slide 2.8s linear infinite;
 }
 
-/* Animation */
-@keyframes bounce {
-  0% {transform: translateX(0) translateY(0); }
-  25% { transform: translateX(200px) translateY(-80px); }
-  50% { transform: translateX(400px) translateY(0); }
-  75% { transform: translateX(600px) translateY(-80px); }
-  100% { transform: translateX(800px) translateY(0); }
+@keyframes slide{
+  from { transform: translateX(0); }
+  to   { transform: translateX(1100px); }
 }
 
 /* RESPONSIVE DESIGN REQUIREMENT */
